@@ -1,0 +1,27 @@
+const Camper = props => {
+  return <p>{props.name}</p>;
+};
+
+// VERIFYING WHETHER THE PROVIDED PROP IS OF TYPE STRING AND IS REQUIRED.
+Camper.propTypes = {
+  name: PropTypes.string.isRequired
+};
+
+// ASSIGNING A DEFAULT PROP VALUE
+Camper.defaultProps = {
+  name: "CamperBot"
+};
+class CampSite extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+  render() {
+    return (
+      <div>
+        <Camper/>
+      </div>
+    );
+  }
+};
+// Change code below this line
+ReactDOM.render(<CampSite />, document.getElementById("challenge-node"));
